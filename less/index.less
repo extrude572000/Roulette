@@ -65,6 +65,7 @@ table {
     border: 2px solid red;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   /*  main-axis positioning  */
     justify-content: space-around;
     
@@ -74,9 +75,22 @@ table {
     /*  cross-axis positiong (with wrapping) */
   /*   align-content: flex-start; */
     background-color:green;
-    height: 600px;
+    height: 400vh;
+    width: 100vw;
   }
-  
+  #numCon{
+    
+    .two-1-row{
+      display:flex;
+    flex-direction:row;
+    justify-content: left;
+      width:100%;
+      height:10vh;
+      border: 2px solid yellow;
+    }
+
+
+  }
   .child {
     background-color: blue;
     border: 2px solid black;
@@ -99,3 +113,21 @@ table {
     width: 50px;
     margin: 10px;
   }
+.container-1{
+  display:flex;
+  flex-direction:column;
+  justify-self: left;
+}
+.two-1-row{
+  
+  width:100%;
+  border: 2px solid yellow;
+  height:30%;
+  .child{
+    border: 2px solid red;
+    flex-wrap: wrap;
+    margin:5px;
+    width:100px;
+    height:20px;
+  }
+}
