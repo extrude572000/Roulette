@@ -213,7 +213,7 @@ table {
 .bet-rows {
   width: 100%;
   border: 2px solid purple;
-  height: 35vh;
+  height: 15vh;
 }
 .bet-rows .child {
   border: 2px solid red;
@@ -221,4 +221,30 @@ table {
   margin: 5px;
   width: 35%;
   height: 60px;
+}
+.playerArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.player-row {
+  width: 100%;
+  border: 2px solid purple;
+  height: 25vh;
+}
+.player-row .child {
+  border: 2px solid red;
+  flex-wrap: wrap;
+  margin: 1px;
+  width: 8vw;
+  height: 19vh;
+}
+.chip {
+  display: flex;
+  background-color: black;
+  border: 2px solid blue;
+}
+.chip img {
+  width: 100%;
+  height: 100%;
 }
