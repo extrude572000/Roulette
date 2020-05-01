@@ -1,0 +1,229 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h5 , p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+//  rgba(241, 227, 227, 0.925);
+//  rgb(188, 185, 209);
+/*  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/banner-flowers.jpg') top left/cover no-repeat;  */
+
+
+
+
+
+
+
+
+
+.parent {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  /*  main-axis positioning  */
+    justify-content: space-around;
+    
+  /*  cross-axis positiong  */
+    align-items: left;
+    
+    /*  cross-axis positiong (with wrapping) */
+  /*   align-content: flex-start; */
+    background-color:green;
+    height: 400vh;
+    width: 100vw;
+  }
+  #numCon{
+    
+    .two-1-row{
+      display:flex;
+    flex-direction:row;
+    justify-content: left;
+      width:100%;
+      height:10vh;
+      border: 2px solid rgb(236, 236, 27);
+    }
+
+
+  }
+  .child {
+    background-color: blue;
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+    color: white;
+  }
+  .parent{
+    .child2-1{
+      display:flex;
+      flex-direction: row;
+      border:2px solid pink;
+
+    }
+  }
+  .child2-1 {
+    background-color: blue;
+    border: 2px solid black;
+    height: 10vh;
+    width: 3vw;
+    padding: 0.04rem;
+    color: white;
+  }
+  .childZero{
+    
+      background-color: blue;
+      border: 2px solid black;
+      height: 30vh;
+      width: 3vw;
+      padding: 20px;
+      color: white;
+    
+  }
+  
+  .child-3 {
+    display: flex;
+    flex-direction:space-between;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .grandchild {
+    background-color: lavender;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+  }
+.container-1{
+  display:flex;
+  flex-direction:column;
+  justify-self: left;
+}
+.two-1-row{
+  
+  width:100%;
+  border: 2px solid purple;
+  height:5vh;
+  .child{
+    border: 2px solid red;
+    flex-wrap: wrap;
+    margin:5px;
+    width:100px;
+    height:20px;
+  }
+}
+
+
+.con12s{
+  display:flex;
+  flex-direction:space-between;
+  justify-items: center;
+}
+.bet-rows{
+  
+  width:100%;
+  border: 2px solid purple;
+  height:15vh;
+  .child{
+    border: 2px solid red;
+    flex-wrap: wrap;
+    margin:5px;
+    width:35%;
+    height:60px;
+  }
+}
+
+.playerArea{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  
+}
+.player-row{
+ 
+  width:100%;
+  border: 2px solid purple;
+  height:25vh;
+  .child{
+    border: 2px solid red;
+    flex-wrap: wrap;
+    margin:1px;
+    width:8vw;
+    height:19vh;
+    
+  }
+}
+
+.chip{
+  display:flex;
+//flex-direction: space-between;
+  //align-items: center;  
+  background-color: black;
+  border: 2px solid blue;
+  //display:flex;
+  //justify-content: left;
+  //width: 300px;
+  //height: 200px;
+  //margin: 2px;
+  //background-clip: border-box;
+  //background-image: url("/casinoImages/5chip.png");
+  //shape-outside: circle();
+  //clip-path: circle();
+ 
+  img{
+
+    //margin:2px;
+    width:100%;
+  height: 100%;
+  //margin: 2px;
+  //background-clip: content-box;
+  }
+}
+
+
+

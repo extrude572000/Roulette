@@ -136,39 +136,100 @@ table {
   /*  cross-axis positiong (with wrapping) */
   /*   align-content: flex-start; */
   background-color: green;
-  height: 400vh;
+  height: 100vh;
   width: 100vw;
 }
-#numCon .two-1-row {
+.parent #numCon .container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+}
+.parent #numCon .two-1-row {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
   width: 100%;
+  border: 2px solid purple;
   height: 10vh;
-  border: 2px solid #ecec1b;
 }
-.child {
-  background-color: blue;
-  border: 2px solid black;
-  height: 40px;
-  width: 40px;
-  padding: 20px;
+.parent #numCon .two-1-row .child {
+  padding: 1.6vh 1.6vw;
   color: white;
+  border: 2px solid red;
+  background-color: green;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 100px;
+  height: 20px;
 }
-.parent .child2-1 {
+.parent #numCon .two-1-row .child-3 {
+  display: flex;
+  flex-direction: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.parent #numCon .two-1-row .red {
+  background: red;
+  border-radius: 70%;
+  width: 40px;
+  height: 40px;
+}
+.parent #numCon .two-1-row .black {
+  background: black;
+  border-radius: 70%;
+  width: 40px;
+  height: 40px;
+}
+.parent #numCon .con12s {
+  display: flex;
+  flex-direction: space-between;
+  justify-items: center;
+}
+.parent #numCon .con12s .child-3 {
+  display: flex;
+  flex-direction: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.parent #numCon .bet-rows {
+  width: 100%;
+  border: 2px solid purple;
+  height: 15vh;
+}
+.parent #numCon .bet-rows .child {
+  border: 2px solid red;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 35%;
+  height: 60px;
+}
+.parent #numCon .playerArea {
   display: flex;
   flex-direction: row;
-  border: 2px solid pink;
+  justify-content: space-around;
 }
-.child2-1 {
-  background-color: blue;
-  border: 2px solid black;
-  height: 10vh;
-  width: 3vw;
-  padding: 0.04rem;
-  color: white;
+.parent #numCon .player-row {
+  width: 100%;
+  border: 2px solid purple;
+  height: 25vh;
 }
-.childZero {
+.parent #numCon .player-row .child {
+  border: 2px solid red;
+  flex-wrap: wrap;
+  margin: 1px;
+  width: 8vw;
+  height: 19vh;
+}
+.parent #numCon .player-row .chip {
+  display: flex;
+  background-color: black;
+  border: 2px solid blue;
+}
+.parent #numCon .player-row .chip img {
+  width: 100%;
+  height: 100%;
+}
+.parent .childZero {
   background-color: blue;
   border: 2px solid black;
   height: 30vh;
@@ -176,75 +237,20 @@ table {
   padding: 20px;
   color: white;
 }
-.child-3 {
+.parent .child2-1 {
   display: flex;
-  flex-direction: space-between;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  border: 2px solid pink;
+  background-color: lightgreen;
+  border: 2px solid black;
+  height: 10vh;
+  width: 3vw;
+  padding: 0.04rem;
+  color: white;
 }
 .grandchild {
   background-color: lavender;
   height: 50px;
   width: 50px;
   margin: 10px;
-}
-.container-1 {
-  display: flex;
-  flex-direction: column;
-  justify-self: left;
-}
-.two-1-row {
-  width: 100%;
-  border: 2px solid purple;
-  height: 5vh;
-}
-.two-1-row .child {
-  border: 2px solid red;
-  flex-wrap: wrap;
-  margin: 5px;
-  width: 100px;
-  height: 20px;
-}
-.con12s {
-  display: flex;
-  flex-direction: space-between;
-  justify-items: center;
-}
-.bet-rows {
-  width: 100%;
-  border: 2px solid purple;
-  height: 15vh;
-}
-.bet-rows .child {
-  border: 2px solid red;
-  flex-wrap: wrap;
-  margin: 5px;
-  width: 35%;
-  height: 60px;
-}
-.playerArea {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.player-row {
-  width: 100%;
-  border: 2px solid purple;
-  height: 25vh;
-}
-.player-row .child {
-  border: 2px solid red;
-  flex-wrap: wrap;
-  margin: 1px;
-  width: 8vw;
-  height: 19vh;
-}
-.chip {
-  display: flex;
-  background-color: black;
-  border: 2px solid blue;
-}
-.chip img {
-  width: 100%;
-  height: 100%;
 }

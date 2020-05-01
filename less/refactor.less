@@ -75,60 +75,42 @@ table {
     /*  cross-axis positiong (with wrapping) */
   /*   align-content: flex-start; */
     background-color:green;
-    height: 100vh;
+    height: 400vh;
     width: 100vw;
 
     #numCon{
-       // Alone classes
-   .container-1{
+    
+      .two-1-row{
+        display:flex;
+      flex-direction:row;
+      justify-content: left;
+        width:100%;
+        height:10vh;
+        border: 2px solid rgb(236, 236, 27);
+
+
+          .child-3 {
+              display: flex;
+              flex-direction:space-between;
+              align-items:center;
+              justify-content:center;
+            }
+
+      }// two-1-row ends
+   // Alone classes
+   .child {
+    background-color: green;
+    border: 2px solid black;
+    height: 6vh;
+    width: 6vw;
+    padding: 20px;
+    color: white;
+  }
+  .container-1{
     display:flex;
     flex-direction:column;
     justify-self: left;
   }
-   
-  .two-1-row{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    width:100%;
-    border: 2px solid purple;
-    height:10vh;
-    .child{
-  
-               
-                padding: 1.6vh 1.6vw;
-                color: white;
-      border: 2px solid red;
-      background-color: green;
-      flex-wrap: wrap;
-      margin:5px;
-      width:100px;
-      height:20px;
-    }
-    .child-3 {
-      display: flex;
-      flex-direction:space-between;
-      align-items:center;
-      justify-content:center;
-    }
-  
-    .red{
-      background: red;
-      border-radius: 70%;
-      width: 40px;
-      height: 40px;
-    }
-    .black{
-      background: black;
-      border-radius: 70%;
-      width: 40px;
-      height: 40px;
-    }
-  
-  
-  
-  }// Two-1-row ends
- 
 
 
 
@@ -143,6 +125,11 @@ table {
       align-items:center;
       justify-content:center;
     }
+
+    
+
+
+
 
   }
   .bet-rows{
@@ -159,13 +146,18 @@ table {
     }
   }
 
-
-// The player area
-.playerArea{
-  display:flex;
-  flex-direction:row;
-  justify-content: space-around;
+.two-1-row{
   
+  width:100%;
+  border: 2px solid purple;
+  height:5vh;
+  .child{
+    border: 2px solid red;
+    flex-wrap: wrap;
+    margin:5px;
+    width:100px;
+    height:20px;
+  }
 }
 
 .player-row{
@@ -211,6 +203,12 @@ table {
 }
 
   
+.playerArea{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  
+}
 
     }/// Numcon Ends
 
