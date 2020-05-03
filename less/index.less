@@ -94,6 +94,15 @@ table {
     width:100%;
     border: 2px solid black;
     height:8.5vh;
+    #gate {
+      cursor: pointer;
+     
+      
+    }
+
+    
+    
+
     .child{
   
                
@@ -176,7 +185,22 @@ table {
   display:flex;
   flex-direction:row;
   justify-content: space-around;
+  .child{
+    img #ball{
+      
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+      
+    }
+  }
   
+}
+.score{
+  width:10vw;
+  font-size:2rem;
+  color:white;
+  background-color:black;
 }
 
 .player-row{
@@ -236,14 +260,15 @@ table {
       background-color: blue;
       border: 2px solid black;
       //border-top-right-radius: 1rem;
-      border-top-left-radius: 1rem;
+     // border-top-left-radius: 1rem;
      // border-bottom-right-radius: 1rem;
-      border-bottom-left-radius: 1rem;
+     // border-bottom-left-radius: 1rem;
       height: 25vh;
       width: 3vw;
-      
       padding: 20px;
       padding-top:60px;
+
+      border-radius:  9rem 0  0  9rem  ;
       color: white;
     
   }
@@ -276,6 +301,7 @@ body > .parent{
   width:100vw;
 
 }
+
 
   
  

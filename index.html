@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="src/index.js" async></script>
 </head>
 <body>
 
@@ -17,44 +18,44 @@
 <!-- Container for numbers bottom 1 and top above 1 are 0 and the 2 to 1 bets-->
 <div id='numCon'>
     <div class='two-1-row container-1'>
-    <div  class="child red child-3">
-      3
-    </div>
-    <div class="child black child-3">
-      6
-    </div>
-    
-    <div class="child red child-3">
-      9
-    </div>
-    <div class="child red child-3">
-      12
-    </div>
-    <div class="child black child-3">
-      15
-    </div>
-    <div class="child red child-3">
-      18
-    </div>
-    <div class="child red child-3">
-      21
-    </div>
-    <div class="child black child-3">
-      24
-    </div>
-    
-    <div class="child red child-3">
-      27
-    </div>
-    <div class="child red child-3">
-      30
-    </div>
-    <div class="child black child-3">
-      33
-    </div>
-    <div class="child red child-3">
-        36
-      </div>
+        <div id="gate"  class="child red child-3 droppable">
+          3
+        </div>
+        <div class="child black child-3">
+          6
+        </div>
+        
+        <div class="child red child-3">
+          9
+        </div>
+        <div class="child red child-3">
+          12
+        </div>
+        <div class="child black child-3">
+          15
+        </div>
+        <div class="child red child-3">
+          18
+        </div>
+        <div class="child red child-3">
+          21
+        </div>
+        <div class="child black child-3">
+          24
+        </div>
+        
+        <div class="child red child-3">
+          27
+        </div>
+        <div class="child red child-3">
+          30
+        </div>
+        <div class="child black child-3">
+          33
+        </div>
+        <div class="child red child-3">
+            36
+          </div>
 </div><!--two-1-row ends-->
 
 <div class='two-1-row container-1'>
@@ -183,7 +184,7 @@
      <!--The player betting-->
      <div class='playerArea player-row'>
         <div class="child chip">
-          <img src="assets/1chip.png" alt="">
+          <img src="assets/1chip.png" id="ball" alt="nochip">
         </div>
         <div class="child chip">
             <img src="assets/chp5.png" alt="">
@@ -214,7 +215,7 @@
     <div class='playerArea player-row'>
         
           <div class="child child-3">
-            <button>Reset-Bets</button>
+            <div class="score">$ 5004 . 00</div>
           </div>
           
           <div class="child">
