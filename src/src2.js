@@ -1,6 +1,6 @@
 
 let currentDroppable = null;
-
+let droppableBelow = null;
 ball.onmousedown = function(event) { // (1) start the process
   let shiftX = event.clientX - ball.getBoundingClientRect().left;
   let shiftY = event.clientY - ball.getBoundingClientRect().top;
@@ -27,17 +27,8 @@ ball.onmousedown = function(event) { // (1) start the process
 
       if (!elemBelow) return;
 
-      let droppableBelow = elemBelow.closest('.droppable');
-      if (currentDroppable != droppableBelow) {
-        if (currentDroppable) { // null when we were not over a droppable before this event
-          leaveDroppable(currentDroppable);
-        }
-        currentDroppable = droppableBelow;
-        if (currentDroppable) { // null if we're not coming over a droppable now
-          // (maybe just left the droppable)
-          enterDroppable(currentDroppable);
-        }
-      }
+       droppableBelow = elemBelow.closest('.droppable');
+      
 
 
     }
@@ -51,7 +42,16 @@ ball.onmousedown = function(event) { // (1) start the process
   
     // (4) drop the ball, remove unneeded handlers
     ball.onmouseup = function() {
-      
+      if (currentDroppable != droppableBelow) {
+        if (currentDroppable) { // null when we were not over a droppable before this event
+          leaveDroppable(currentDroppable);
+        }
+        currentDroppable = droppableBelow;
+        if (currentDroppable) { // null if we're not coming over a droppable now
+          // (maybe just left the droppable)
+          enterDroppable(currentDroppable);
+        }
+      }
       document.removeEventListener('mousemove', onMouseMove);
       ball.onmouseup = null;
        //document.getElementsByClassName('.red').style.backgroundColor = "purple";
