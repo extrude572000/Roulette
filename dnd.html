@@ -26,14 +26,14 @@
       ball.style.position = 'absolute';
       ball.style.zIndex = 1000;
       document.body.append(ball);
-
-      moveAt(event.pageX, event.pageY);
-
       function moveAt(pageX, pageY) {
         ball.style.left = pageX - shiftX + 'px';
         ball.style.top = pageY - shiftY + 'px';
       }
 
+      moveAt(event.pageX, event.pageY);
+
+   
       function onMouseMove(event) {
         moveAt(event.pageX, event.pageY);
 
