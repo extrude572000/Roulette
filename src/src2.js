@@ -474,8 +474,9 @@ chip5.onmousedown = function(event) { // (1) start the process
    // alert('yowie'+val+'yodal');
     elem.style.background = 'purple';
     console.log(val);
-    document.getElementById('score').innerHTML += val;
-
+    var f = document.getElementById('score');
+f.append(val);
+//document.getElementById('score').innerHTML += val;
 
   
   

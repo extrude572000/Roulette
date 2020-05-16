@@ -3,9 +3,14 @@ The Game of Roulette
 Needs Functionality!!
 
 Drag n' drop prototype chips bugs
-    -- Placing drag n drop in functions only works when you click once and click a 2nd time and hold. 
+--- Only works as a async script
 
-    -- Using drag n drop module  of img id requires one click held down to work. 1 single click without mouse held down causes error of postitinoing and holding it down still. 
+-- Placing drag n drop in functions only works when you click once and click a 2nd time and hold. 
+    -- Need to try with event handlers
+
+-- The value comes up for the chips but not the first time
+
+-- Using drag n drop module  of img id requires one click held down to work. 1 single click without mouse held down causes error of postitinoing and holding it down still. 
 
 --Make prototypes of ways that work
            
