@@ -232,6 +232,156 @@ chip4.onmousedown = function(event) { // (1) start the process
 
 
 
+    /* 50 dollar chip */
+
+
+chip5.onmousedown = function(event) { // (1) start the process
+  
+  // Can place in moveAt()
+  let shiftX = event.clientX - chip5.getBoundingClientRect().left;
+  let shiftY = event.clientY - chip5.getBoundingClientRect().top;
+    // (2) prepare to moving: make absolute and on top by z-index
+   
+    chip5.style.position = 'absolute';
+    chip5.style.zIndex = 1000;
+    // move it out of any current parents directly into body
+    // to make it positioned relative to the body
+    document.body.append(chip5);
+    //document.getElementsByClassName('red').style.backgroundColor = "purple";
+    // ...and put that absolutely positioned ball under the pointer
+    // centers the ball at (pageX, pageY) coordinates
+    function moveAt(pageX, pageY) {
+      chip5.style.left = pageX - chip5.offsetWidth / 2 + 'px';
+      chip5.style.top = pageY - chip5.offsetHeight / 2 + 'px';
+      // Shrink for handle usages
+      chip5.style.height = '20px';
+      chip5.style.width = '20px';
+/* TODO: if user presses esc while moving reset it */
+
+    }
+    moveAt(event.pageX, event.pageY);
+    function onMouseMove(event) {
+      moveAt(event.pageX, event.pageY);
+      chip5.hidden = true;
+      let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+      chip5.hidden = false;
+
+      if (!elemBelow) return;
+
+       droppableBelow = elemBelow.closest('.droppable');
+      
+
+
+    }
+    
+  
+    
+   
+  
+    // (3) move the ball on mousemove
+    document.addEventListener('mousemove', onMouseMove);
+  
+    // (4) drop the ball, remove unneeded handlers
+    chip5.onmouseup = function() {
+// VAlue of the chip entering the dropable area
+      var chp2=document.getElementById('chip5').getAttribute('value');
+//console.log(product+'hi');
+      if (currentDroppable != droppableBelow) {
+        if (currentDroppable) { // null when we were not over a droppable before this event
+          leaveDroppable(currentDroppable,chp2);
+        }
+        currentDroppable = droppableBelow;
+        if (currentDroppable) { // null if we're not coming over a droppable now
+          // (maybe just left the droppable)
+          enterDroppable(currentDroppable);
+        }
+      }
+      document.removeEventListener('mousemove', onMouseMove);
+      chip5.onmouseup = null;
+       //document.getElementsByClassName('.red').style.backgroundColor = "purple";
+    };
+  
+  };
+
+
+
+
+   /* 100 dollar chip */
+
+
+   chip6.onmousedown = function(event) { // (1) start the process
+  
+    // Can place in moveAt()
+    let shiftX = event.clientX - chip6.getBoundingClientRect().left;
+    let shiftY = event.clientY - chip6.getBoundingClientRect().top;
+      // (2) prepare to moving: make absolute and on top by z-index
+     
+      chip6.style.position = 'absolute';
+      chip6.style.zIndex = 1000;
+      // move it out of any current parents directly into body
+      // to make it positioned relative to the body
+      document.body.append(chip6);
+      //document.getElementsByClassName('red').style.backgroundColor = "purple";
+      // ...and put that absolutely positioned ball under the pointer
+      // centers the ball at (pageX, pageY) coordinates
+      function moveAt(pageX, pageY) {
+        chip6.style.left = pageX - chip6.offsetWidth / 2 + 'px';
+        chip6.style.top = pageY - chip6.offsetHeight / 2 + 'px';
+        // Shrink for handle usages
+        chip6.style.height = '20px';
+        chip6.style.width = '20px';
+  /* TODO: if user presses esc while moving reset it */
+  
+      }
+      moveAt(event.pageX, event.pageY);
+      function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+        chip6.hidden = true;
+        let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+        chip6.hidden = false;
+  
+        if (!elemBelow) return;
+  
+         droppableBelow = elemBelow.closest('.droppable');
+        
+  
+  
+      }
+      
+    
+      
+     
+    
+      // (3) move the ball on mousemove
+      document.addEventListener('mousemove', onMouseMove);
+    
+      // (4) drop the ball, remove unneeded handlers
+      chip6.onmouseup = function() {
+  // VAlue of the chip entering the dropable area
+        var chp2=document.getElementById('chip6').getAttribute('value');
+  //console.log(product+'hi');
+        if (currentDroppable != droppableBelow) {
+          if (currentDroppable) { // null when we were not over a droppable before this event
+            leaveDroppable(currentDroppable,chp2);
+          }
+          currentDroppable = droppableBelow;
+          if (currentDroppable) { // null if we're not coming over a droppable now
+            // (maybe just left the droppable)
+            enterDroppable(currentDroppable);
+          }
+        }
+        document.removeEventListener('mousemove', onMouseMove);
+        chip6.onmouseup = null;
+         //document.getElementsByClassName('.red').style.backgroundColor = "purple";
+      };
+    
+    };
+
+
+
+  
+
+
   function enterDroppable(elem) {
     elem.style.background = 'pink';
   }
