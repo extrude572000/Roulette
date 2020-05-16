@@ -7,8 +7,8 @@ let droppableBelow = null;
 **BUG:On first mouse down The arrow must first move before mouse up happens 
 ** As long as this is done first time there is no bug after that. 
 */
-var inputs = null;
-inputs = document.getElementsByTagName("img");
+//var inputs = null;
+//inputs = document.getElementsByTagName("img");
 //console.log(inputs.name);
 
 
@@ -384,15 +384,16 @@ chip5.onmousedown = function(event) { // (1) start the process
 
   function enterDroppable(elem) {
     elem.style.background = 'pink';
+    
   }
 
   function leaveDroppable(elem,val) {
 
   // ToDO: minus the val from the player stack
-    console.log('yowie'+val+'yodal');
-
-
+   // alert('yowie'+val+'yodal');
     elem.style.background = 'purple';
+    
+   // document.getElementById("score").innerHTML = val;
   }
 // 5 dollar
   chip2.ondragstart = function() {
